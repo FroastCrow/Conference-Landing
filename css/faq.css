@@ -1,0 +1,232 @@
+/* FAQ Section Styles */
+.faq-section {
+    padding: 80px 0 100px;
+    background-color: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-section::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 610px;
+    height: 900px;
+    background: url('../img/faq-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: 0;
+}
+
+.faq-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.faq-section .mainTitle {
+    margin: 0 0 60px;
+    padding: 0;
+}
+
+.faq-content {
+    margin-bottom: 50px;
+}
+
+.faq-category {
+    margin-bottom: 25px;
+}
+
+.faq-category-title {
+    font-size: 33px;
+    line-height: 120%;
+    color: #383838;
+    font-weight: 600;
+    margin: 0 0 15px;
+    padding: 0;
+}
+
+.faq-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* .faq-item {
+
+} */
+
+.faq-question {
+    width: 100%;
+    background-color: #6C5AF4;
+    color: #FFFFFF;
+    border: none;
+    padding: 20px 25px;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+    font-family: 'Lato', sans-serif;
+}
+
+.faq-question:hover {
+    background-color: #5A4AE0;
+}
+
+.faq-question.active {
+    /* background-color: #4738B7; */
+    border-radius: 12px 12px 0 0;
+}
+
+.faq-question span:first-child {
+    flex: 1;
+}
+
+.faq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+    color: #FFFFFF;
+}
+
+.faq-question.active .faq-icon {
+    transform: rotate(180deg);
+}
+
+.faq-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, padding 0.4s ease, opacity 0.3s ease;
+    background-color: #6C5AF4;
+    padding: 0 25px;
+    opacity: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    padding: 20px 25px;
+    opacity: 1;
+    border-radius: 0 0 12px 12px;
+}
+
+.faq-answer p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 30px;
+    color: #FFFFFF;
+}
+
+/* Contact Section */
+.faq-contact {
+    font-weight: 600;
+}
+
+.faq-contact-text {
+    font-size: 18px;
+    line-height: 30px;
+    color: #383838;
+    margin: 0 0 15px;
+    font-weight: 600;
+}
+
+.faq-contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-contact-item {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    text-decoration: none;
+    color: #383838;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.faq-contact-item:hover {
+    color: #6C5AF4;
+}
+
+.faq-contact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+}
+
+.faq-contact-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .faq-section {
+        padding: 60px 0 80px;
+    }
+    
+    .faq-title {
+        font-size: 49px;
+        margin-bottom: 40px;
+    }
+    
+    .faq-category-title {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    
+    .faq-question {
+        padding: 15px 20px;
+        font-size: 18px;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 15px 20px;
+    }
+    
+    .faq-answer p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .faq-contact {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+    
+    .faq-contact-text {
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    .faq-contact-item {
+        font-size: 16px;
+    }
+    
+    .faq-section::before {
+        width: 300px;
+        height: 300px;
+    }
+}
+
